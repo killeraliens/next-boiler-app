@@ -17,11 +17,13 @@ model User {
   updatedAt DateTime  @updatedAt
   Token     Token[]
   Password  Password?
+  role      Role      @default(USER)
 }
 
 enum Role {
   USER
   ADMIN
+  MODERATOR
 }
 
 model Token {
